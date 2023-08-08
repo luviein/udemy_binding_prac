@@ -1,0 +1,7 @@
+<p>testing works!</p>
+
+<!-- updates to TS attribute every time cos its 2 way binded -->
+<input type="text" name="username" [(ngModel)]="username">
+<p>Username is: {{username}}</p>
+
+<button [disabled]="isUsernameEmpty()" (click)="onClick()">Reset</button>
