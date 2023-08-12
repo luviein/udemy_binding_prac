@@ -8,5 +8,15 @@ import { Component } from '@angular/core';
 export class DirectivesComponent {
 
   isHidden : boolean = false;
-  
+  noOfClicks : number[] = [];
+
+  buttonClick() {
+    this.noOfClicks.push(this.noOfClicks.length + 1)
+  }
+
+  // returns true if index is higher than 4
+  // index starts at 0, so 5th item onwards is at position 4
+  hasBlueBackground(index : number) : boolean {
+    return index > 3;
+  }
 }

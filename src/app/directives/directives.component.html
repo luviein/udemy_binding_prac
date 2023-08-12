@@ -1,7 +1,11 @@
 <!-- sets isHidden to the opposite attribute to toggle -->
 
-<button (click)="isHidden = !isHidden">Display Details</button>
+<button (click)=" buttonClick() ; isHidden = !isHidden">Display Details</button>
 
 <p *ngIf="isHidden">
   Secret Password = tuna
 </p>
+
+<p> Click Log : </p> <br>
+<span *ngFor="let number of noOfClicks; let i = index"
+      [ngClass]="{'blue-background' : hasBlueBackground(i)}">{{number}}</span>
