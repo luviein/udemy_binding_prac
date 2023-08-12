@@ -1,0 +1,7 @@
+<!-- sets isHidden to the opposite attribute to toggle -->
+
+<button (click)="isHidden = !isHidden">Display Details</button>
+
+<p *ngIf="isHidden">
+  Secret Password = tuna
+</p>
